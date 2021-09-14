@@ -338,3 +338,8 @@ LEP_RESULT UVC_RunCommand(LEP_CAMERA_PORT_DESC_T_PTR portDescPtr,
     return static_cast<LeptonVariation*>(portDescPtr->userPtr) ->
             UVC_RunCommand(commandID);
 }
+
+bool LeptonVariation::supportsRadiometry() const
+{
+    return m_supportsRadiometry;
+}

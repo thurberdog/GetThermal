@@ -116,13 +116,15 @@ public:
     Q_PROPERTY(bool supportsHwPseudoColor READ getSupportsHwPseudoColor)
     bool getSupportsHwPseudoColor() const;
 
-    Q_PROPERTY(bool supportsRadiometry READ getSupportsRadiometry)
+    Q_PROPERTY(bool supportsRadiometry READ supportsRadiometry)
     bool getSupportsRadiometry();
 
     Q_PROPERTY(bool supportsRuntimeAgcChange READ getSupportsRuntimeAgcChange)
     bool getSupportsRuntimeAgcChange() const;
 
     virtual const QVideoSurfaceFormat getDefaultFormat();
+
+    bool supportsRadiometry() const;
 
 signals:
 
@@ -206,6 +208,7 @@ private:
     LEP_OEM_PART_NUMBER_T partNumber;
 
     int leptonCommandIdToUnitId(LEP_COMMAND_ID commandID);
+    bool m_supportsRadiometry;
 };
 
 Q_DECLARE_METATYPE(PCOLOR_LUT_E)

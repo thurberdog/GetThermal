@@ -64,11 +64,13 @@ public:
     Q_PROPERTY(bool supportsHwPseudoColor READ getSupportsHwPseudoColor)
     bool getSupportsHwPseudoColor() const;
 
-    Q_PROPERTY(bool supportsRadiometry READ getSupportsRadiometry)
+    Q_PROPERTY(bool supportsRadiometry READ supportsRadiometry)
     bool getSupportsRadiometry();
 
     Q_PROPERTY(const QVideoSurfaceFormat defaultFormat READ getDefaultFormat)
     virtual const QVideoSurfaceFormat getDefaultFormat();
+
+    bool supportsRadiometry() const;
 
 signals:
     void cameraInternalTempChanged(float temp);
@@ -113,6 +115,7 @@ private:
     uvc_device_handle_t *devh;
     libusb_device_handle *usb_devh;
     uvc_device_descriptor_t *desc;
+    bool m_supportsRadiometry;
 };
 
 Q_DECLARE_METATYPE(COLORLUT_ID_E)

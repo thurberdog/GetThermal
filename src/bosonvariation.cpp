@@ -118,3 +118,8 @@ void BosonVariation::performFfc()
     FLR_RESULT result = bosonRunFFC();
     printf("RunFFC:  0x%08X \n", result);
 }
+
+bool BosonVariation::supportsRadiometry() const
+{
+    return m_supportsRadiometry;
+}

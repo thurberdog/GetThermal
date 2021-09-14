@@ -8,7 +8,7 @@ Item {
 
     property UvcAcquisition acq: null
     property bool farenheitTemps: false
-    property bool radiometryLowGain: acq.cci.radTLinearResolution == LEP_RAD_TLINEAR_RESOLUTION_E.LEP_RAD_RESOLUTION_0_1
+    property bool radiometryLowGain: acq.cci.radTLinearResolution === LEP_RAD_TLINEAR_RESOLUTION_E.LEP_RAD_RESOLUTION_0_1
 
     width: 160
     height: 60
