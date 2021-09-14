@@ -208,7 +208,7 @@ private:
     LEP_OEM_PART_NUMBER_T partNumber;
 
     int leptonCommandIdToUnitId(LEP_COMMAND_ID commandID);
-    bool m_supportsRadiometry;
+    bool m_supportsRadiometry = false;
 };
 
 Q_DECLARE_METATYPE(PCOLOR_LUT_E)

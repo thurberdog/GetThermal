@@ -115,7 +115,7 @@ private:
     uvc_device_handle_t *devh;
     libusb_device_handle *usb_devh;
     uvc_device_descriptor_t *desc;
-    bool m_supportsRadiometry;
+    bool m_supportsRadiometry = false;
 };
 
 Q_DECLARE_METATYPE(COLORLUT_ID_E)
